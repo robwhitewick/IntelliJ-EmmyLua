@@ -1,5 +1,5 @@
 ![logo](/snapshot/logo.png)
-# EmmyLua for IntelliJ IDEA
+# EmmyLua for IntelliJ IDEA THAT SUPPORTS BACKTICKS
 
 [![Build status](https://github.com/EmmyLua/IntelliJ-EmmyLua/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/EmmyLua/IntelliJ-EmmyLua/actions/workflows/build.yml)
 [![Online EmmyLua Doc](https://img.shields.io/badge/emmy-doc-46BC99.svg?style=flat-square)](https://emmylua.github.io)
@@ -119,5 +119,3 @@ QQ交流群：1群：`29850775` 2群：`529914962`
 - [**@KKKIIO** KKKIIO](https://github.com/KKKIIO)
 - [**@zj6882917** zj6882917](https://github.com/zj6882917)
 - [**@fangfang1984** fangfang1984](https://github.com/fangfang1984)
-
-- pls work
