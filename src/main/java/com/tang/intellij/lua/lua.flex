@@ -188,6 +188,7 @@ LONG_STRING=\[=*\[[\s\S]*\]=*\]
 
   "\""                        { yybegin(xDOUBLE_QUOTED_STRING); yypushback(yylength()); }
   "'"                         { yybegin(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
+  "`"                         { yybegin(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
 
   {ID}                        { return ID; }
   {NUMBER}                    { return NUMBER; }
