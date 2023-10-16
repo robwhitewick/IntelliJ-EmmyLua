@@ -19,8 +19,8 @@ import org.apache.tools.ant.taskdefs.condition.Os
 import java.io.ByteArrayOutputStream
 
 plugins {
-    id("org.jetbrains.intellij").version("1.10.0")
-    id("org.jetbrains.kotlin.jvm").version("1.7.22")
+    id("org.jetbrains.intellij").version("1.13.3")
+    id("org.jetbrains.kotlin.jvm").version("1.8.21")
     id("de.undercouch.download").version("5.3.0")
 }
 
@@ -41,9 +41,18 @@ data class BuildData(
 
 val buildDataList = listOf(
     BuildData(
-        ideaSDKShortVersion = "223",
+        ideaSDKShortVersion = "231",
         // 223.7571.123-EAP-SNAPSHOT
         // LATEST-EAP-SNAPSHOT
+        ideaSDKVersion = "2023.1",
+        sinceBuild = "231",
+        untilBuild = "232.*",
+        bunch = "212",
+        targetCompatibilityLevel = JavaVersion.VERSION_17,
+        jvmTarget = "17"
+    ),
+    BuildData(
+        ideaSDKShortVersion = "223",
         ideaSDKVersion = "2022.3",
         sinceBuild = "223",
         untilBuild = "223.*",
@@ -184,10 +193,10 @@ project(":") {
         }
     }
 
-    configure<JavaPluginConvention> {
+    /*configure<JavaPluginConvention> {
         sourceCompatibility = buildVersionData.targetCompatibilityLevel
         targetCompatibility = buildVersionData.targetCompatibilityLevel
-    }
+    }*/
 
     intellij {
         type.set("IC")
