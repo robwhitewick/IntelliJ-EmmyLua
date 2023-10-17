@@ -194,6 +194,7 @@ SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
 <xTAG_WITH_ID> {
     "\""                       { pushState(xDOUBLE_QUOTED_STRING); yypushback(yylength()); }
     "'"                        { pushState(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
+    "`"                        { pushState(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
     {ID}                       { yybegin(xCOMMENT_STRING); return ID; }
 }
 
