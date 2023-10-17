@@ -63,7 +63,7 @@ DOC_DASHES = --+
 //Strings
 DOUBLE_QUOTED_STRING=\"([^\\\"]|\\\S|\\[\r\n])*\"?  //\"([^\\\"\r\n]|\\[^\r\n])*\"?
 SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
-BACKTICK_QUOTED_STRING='([^\\\`]|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
+BACKTICK_QUOTED_STRING=`([^\\\`]|\\\S|\\[\r\n])*`?    //'([^\\'\r\n]|\\[^\r\n])*'?
 
 
 %state xTAG
@@ -201,7 +201,7 @@ BACKTICK_QUOTED_STRING='([^\\\`]|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*
 <xTAG_WITH_ID> {
     "\""                       { pushState(xDOUBLE_QUOTED_STRING); yypushback(yylength()); }
     "'"                        { pushState(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
-    "`"                        { pushState(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
+    "`"                        { pushState(xBACKTICK_QUOTED_STRING); yypushback(yylength()); }
     {ID}                       { yybegin(xCOMMENT_STRING); return ID; }
 }
 
