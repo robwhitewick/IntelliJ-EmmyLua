@@ -170,6 +170,7 @@ SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
     "}"                        { _typeLevel--; _typeReq = false; return RCURLY; }
     "\""                       { pushState(xDOUBLE_QUOTED_STRING); yypushback(yylength()); }
     "'"                        { pushState(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
+    "'"                        { pushState(BACKTICKS_STRING); yypushback(yylength()); }
     "[]"                       { _typeReq = false; return ARR; }
     "fun"                      { return FUN; }
     "vararg"                   { _typeReq = true; return VARARG; }

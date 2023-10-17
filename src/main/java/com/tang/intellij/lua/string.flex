@@ -51,8 +51,6 @@ import static com.tang.intellij.lua.psi.LuaTypes.*;
     \\\d+       { return VALID_STRING_ESCAPE_TOKEN; }
     \\\S        { return VALID_STRING_ESCAPE_TOKEN; }
     [^]         { return STRING; }
-    [`]         { return STRING; }
-    [\p{P}\p{S}]        { return STRING; }
 }
 
 <BLOCK_STRING_CONTENT> {
