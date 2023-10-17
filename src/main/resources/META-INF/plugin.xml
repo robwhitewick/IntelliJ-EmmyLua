@@ -15,10 +15,10 @@
   -->
 
 <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
-    <id>com.tang</id>
+    <id>com.rob</id>
     <name>EmmyLuaRob</name>
     <version>1.4.0</version>
-    <vendor email="love.tangzx@qq.com">tangzx</vendor>
+    <vendor email="rob">test</vendor>
     <category>Custom Languages</category>
     <description><![CDATA[
     Support for Lua programming language.<br>
